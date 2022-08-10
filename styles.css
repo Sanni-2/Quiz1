@@ -12,7 +12,7 @@ body {
 
 .startButton {
     margin-top: 5%;
-    margin-bottom: 100%;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
 }
@@ -62,4 +62,34 @@ body {
 
 .buttons button.quit:hover {
     color: skyblue
+}
+
+
+
+
+.quiz {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+main {
+    padding: 25px 30px 20px 25px;
+    background: white;
+}
+
+
+.clicks main .question {
+    font-size: 25px;
+}
+
+
+.clicks main .option {
+    padding:  8px 15px;
+    border: 1px solid skyblue;
+}
+
+.clicks main .option:hover{
+    color: skyblue;
 }
