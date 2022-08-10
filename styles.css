@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background: skyblue;
+}
+
+.startButton {
+    margin-top: 5%;
+    margin-bottom: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.startButton button {
+    font-size: 20px;
+    color: rgb(239, 239, 243);
+    margin: 0 5px;
+    font-size: 20px;
+    border: 1px solid blue;
+    height: 40px;
+    width: 100px;
+    background: green;
+    cursor: pointer;
+}
+
+.buttons {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.buttons button{
+    margin: 0 5px;
+    font-size: 20px;
+    color: rgb(235, 235, 241);
+    border: 1px solid blue;
+    border-radius: 2px;
+    height: 40px;
+    width: 100px;
+    background: green;
+    cursor: pointer;
+}
+
+
+.startButton button:hover {
+    color: skyblue
+}
+
+.buttons button.next:hover{
+    color: skyblue;
+}
+
+.buttons button.quit:hover {
+    color: skyblue
+}
