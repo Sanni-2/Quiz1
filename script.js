@@ -1,9 +1,8 @@
 const startButton = document.querySelector(".startButton button");
 const quit_button = document.querySelector(".buttons .quit");
-const continue_button = document.querySelector(".buttons .next");
 const seconds = document.querySelector(".time .count-down");
 const questionSection = document.querySelector(".questionSection");
-
+const nextButton = document.querySelector(".clicks .buttons .next");
 
 
 
@@ -18,7 +17,6 @@ startButton.onclick = () => {
 //Questions array
 let questions = [
     {
-        numb: 1,
         question: "What is the capital of the United States?",
         answer: "Washington DC",
         option: [
@@ -30,7 +28,6 @@ let questions = [
     },
 
     {
-        numb: 2,
         question: "What is the capital of China?",
         answer: "Beijing",
         option: [
@@ -42,7 +39,6 @@ let questions = [
     },
 
     {
-        numb: 3,
         question: "What is the capital of Canada?",
         answer: "Ottawa",
         option: [
@@ -54,7 +50,6 @@ let questions = [
     },
 
     {
-        numb: 4,
         question: "What is the capital of Nigeria?",
         answer: "Abuja",
         option: [
@@ -78,10 +73,28 @@ const questionOnScreen = (i) => {
 
 
     let questionTag = '<span>'+ questions[i].question +'</span>';
+    
 
     let optionTag = '<div class="option"> '+ questions[i].option[0] +'<span></span></div>' + '<div class="option"> '+ questions[i].option[1] +' <span></span></div>' + '<div class="option"> '+ questions[i].option[2] +'<span></span></div>' + '<div class="option"> '+ questions[i].option[3] +'<span></span></div>' ;
 
     questionTab.innerHTML = questionTag;
     optionList.innerHTML = optionTag;
-}
+};
 
+
+
+
+
+
+
+
+
+//next button
+let count = 0;
+nextButton.onclick = () => {
+    if(count < questions.length - 1){
+    count++;
+    questionOnScreen(count);
+    }
+    else{}
+};
