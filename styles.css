@@ -70,7 +70,8 @@ body {
 .quiz {
     font-size: 20px;
     display: flex;
-    justify-content: flex-end;
+    color: 
+    
 }
 
 
@@ -94,3 +95,11 @@ body {
     color: skyblue;
     cursor: pointer;
 }
+
+
+
+@media screen and (min-width: 780px) {
+    button {
+      color: blue;
+    }
+  };

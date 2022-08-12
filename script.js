@@ -1,16 +1,21 @@
 const startButton = document.querySelector(".startButton button");
-const quit_button = document.querySelector(".buttons .quit");
-const seconds = document.querySelector(".time .count-down");
+const quit_button = document.querySelector(".quit");
+const seconds = document.querySelector(".count-down");
 const questionSection = document.querySelector(".questionSection");
-const nextButton = document.querySelector(".clicks .buttons .next");
+const nextButton = document.querySelector(".next");
+
+let playerScore = 0
+let wrongAttempt = 0
 
 
 
 
-startButton.onclick = () => {
+
+//Start button Functionality
+startButton.addEventListener("click", () => {
     questionSection.classList.add()
     questionOnScreen(0)
-}
+});
 
 
 
@@ -44,7 +49,7 @@ let questions = [
         option: [
             "Ontario",
             "Alberta",
-            "Quebec",
+            "Ottawa",
             "British Columbia",
         ]
     },
@@ -64,7 +69,7 @@ let questions = [
 ];
 
 
-//showing questions from array above
+//show questions from array above
 const questionOnScreen = (i) => {
     const questionTab = document.querySelector(".questionTab");
 
@@ -73,28 +78,35 @@ const questionOnScreen = (i) => {
 
 
     let questionTag = '<span>'+ questions[i].question +'</span>';
-    
+
 
     let optionTag = '<div class="option"> '+ questions[i].option[0] +'<span></span></div>' + '<div class="option"> '+ questions[i].option[1] +' <span></span></div>' + '<div class="option"> '+ questions[i].option[2] +'<span></span></div>' + '<div class="option"> '+ questions[i].option[3] +'<span></span></div>' ;
 
     questionTab.innerHTML = questionTag;
     optionList.innerHTML = optionTag;
+
 };
-
-
-
-
-
-
-
 
 
 //next button
 let count = 0;
-nextButton.onclick = () => {
+nextButton.addEventListener( "click", () => {
     if(count < questions.length - 1){
     count++;
     questionOnScreen(count);
     }
-    else{}
-};
+    else{
+        //Score screen goes here
+    }
+});
+
+
+//quit button, it reloads everything on the page.
+quit_button.addEventListener("click", () => {
+    window.location.reload();
+});
+
+
+
+
+//When option is being clicked
